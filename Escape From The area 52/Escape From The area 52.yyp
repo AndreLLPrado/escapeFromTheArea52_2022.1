@@ -1,5 +1,13 @@
 {
   "resources": [
+    {"id":{"name":"spr_player_placeholder","path":"sprites/spr_player_placeholder/spr_player_placeholder.yy",},"order":0,},
+    {"id":{"name":"obj_bullet","path":"objects/obj_bullet/obj_bullet.yy",},"order":2,},
+    {"id":{"name":"obj_player","path":"objects/obj_player/obj_player.yy",},"order":0,},
+    {"id":{"name":"spr_bullet_placeholder","path":"sprites/spr_bullet_placeholder/spr_bullet_placeholder.yy",},"order":2,},
+    {"id":{"name":"spr_wall_placeholder","path":"sprites/spr_wall_placeholder/spr_wall_placeholder.yy",},"order":1,},
+    {"id":{"name":"obj_enymy_base","path":"objects/obj_enymy_base/obj_enymy_base.yy",},"order":3,},
+    {"id":{"name":"obj_wall","path":"objects/obj_wall/obj_wall.yy",},"order":1,},
+    {"id":{"name":"spr_enemy","path":"sprites/spr_enemy/spr_enemy.yy",},"order":3,},
     {"id":{"name":"Room1","path":"rooms/Room1/Room1.yy",},"order":0,},
   ],
   "Options": [
@@ -9,7 +17,7 @@
     {"name":"Windows","path":"options/windows/options_windows.yy",},
     {"name":"operagx","path":"options/operagx/options_operagx.yy",},
   ],
-  "defaultScriptType": 0,
+  "defaultScriptType": 1,
   "isEcma": false,
   "configs": {
     "name": "Default",
