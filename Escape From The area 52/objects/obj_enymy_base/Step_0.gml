@@ -20,3 +20,9 @@ if place_meeting(x, y + vSpeed, obj_wall){
 }
 
 move_towards_point(hSpeed, vSpeed, eSpeed);
+
+#region PLAYERCOLLISON
+if place_meeting(x,y,obj_player){
+	obj_player.visible = false;
+}
+#endregion

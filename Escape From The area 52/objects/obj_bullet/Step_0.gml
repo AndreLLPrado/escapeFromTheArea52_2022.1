@@ -3,6 +3,7 @@ if place_meeting(x, y, obj_wall){
 }
 
 if place_meeting(x, y, obj_enymy_base){
+	obj_gameController.points += obj_enymy_base.valuePoints;
 	instance_destroy(obj_enymy_base);
 	instance_destroy();
 }
