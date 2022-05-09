@@ -1,28 +1,16 @@
-var pX = obj_player.x;
-var pY = obj_player.y;
-
-
-hSpeed = (pX) * eSpeed;
-if place_meeting(x + hSpeed, y, obj_wall){
-	while !place_meeting(x + sign(hSpeed), y, obj_wall){
-		x += sign(hSpeed);
+if instance_exists(obj_player){
+	if(obj_player.visible && !obj_gameController.respawn && !obj_gameController.gameOver
+	&& obj_gameController.startGame){
+		move_towards_point(obj_player.x, obj_player.y,eSpeed);
+		image_angle = point_direction(x,y, obj_player.x,obj_player.y)-90;
 	}
-	hSpeed = 0;
-}
-
-vSpeed = (pY) * eSpeed;
-
-if place_meeting(x, y + vSpeed, obj_wall){
-	while !place_meeting(x + sign(vSpeed), y, obj_wall){
-		y += sign(vSpeed);
+	else{
+		x = 0;
+		y = 0;
 	}
-	vSpeed = 0;
 }
 
-move_towards_point(hSpeed, vSpeed, eSpeed);
-
-#region PLAYERCOLLISON
-if place_meeting(x,y,obj_player){
-	obj_player.visible = false;
+if hp <= 0{
+	obj_gameController.scorePoints += valuePoints;
+	instance_destroy();
 }
-#endregion

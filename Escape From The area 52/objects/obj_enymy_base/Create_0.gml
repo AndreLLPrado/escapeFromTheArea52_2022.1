@@ -1,6 +1,5 @@
 eSpeed = 1;
-aux = eSpeed;
 valuePoints = 100;
 
-hSpeed = 0;
-vSpeed = 0;
+maxHp = 1;
+hp = maxHp;

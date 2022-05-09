@@ -1,2 +1,9 @@
-points = 0;
-pLifes = 3;
+scorePoints = 0;
+startLifes = 3;
+pLifes = startLifes;
+invincibility = 90;
+inv = invincibility;
+respawn = false;
+gameOver = false;
+reset = false;
+startGame = false;
