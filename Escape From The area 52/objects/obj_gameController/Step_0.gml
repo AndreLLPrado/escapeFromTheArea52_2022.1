@@ -28,6 +28,7 @@ if respawn{
 
 #region RESETGAME
 if reset{
+	nameInputed = false;
 	//Reset Player
 	obj_player.x = 381;
 	obj_player.y = 290;
@@ -52,5 +53,11 @@ if reset{
 #region STARTGAME
 if keyboard_check_pressed(ord("T")){
 	startGame = true;
+}
+#endregion
+
+#region SCOREBOARD
+if scorePoints > bestScore {
+	bestScore = scorePoints;
 }
 #endregion
