@@ -9,6 +9,8 @@ gameOver = false;
 reset = false;
 nameInputed = false;
 startGame = false;
+debugMode = false;
+scoreUpdated = false;
 playerName = "AND";
 
 #region SCOREBOARD
@@ -17,6 +19,7 @@ leaderboard = [];
 #endregion
 
 #region FILEMANAGER
+//load scoreboard
 fScore = file_text_open_read(working_directory+"score.txt");
 n = file_text_read_real(fScore);
 scoreboard = array_create(n);
@@ -30,4 +33,8 @@ for(i = 0; i < n; i++){
 }
 file_text_close(fScore);
 
+#endregion
+
+#region MUSIC
+audio_play_sound(bgm_music1,1,true);
 #endregion

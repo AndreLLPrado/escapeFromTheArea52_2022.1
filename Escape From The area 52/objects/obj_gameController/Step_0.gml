@@ -28,7 +28,10 @@ if respawn{
 
 #region RESETGAME
 if reset{
+	//Game configs
 	nameInputed = false;
+	scoreUpdated = false;
+	
 	//Reset Player
 	obj_player.x = 381;
 	obj_player.y = 290;
@@ -59,5 +62,40 @@ if keyboard_check_pressed(ord("T")){
 #region SCOREBOARD
 if scorePoints > bestScore {
 	bestScore = scorePoints;
+}
+	
+//Update Scoreboard
+if gameOver && nameInputed{
+	if instance_exists(obj_inputText) && !scoreUpdated{
+		var nAux = "";
+		var sAux = 0;
+		var scoreAtual = scorePoints;
+		var nomeAtual = obj_inputText.inputName;
+			
+		for (i = 0; i < n; i++){
+			if scoreAtual > scoreboard[i]{
+				//for player points
+				sAux = scoreboard[i];
+				scoreboard[i] = scoreAtual;
+				scoreAtual = sAux;
+				//for player name
+				nAux = leaderboard[i];
+				leaderboard[i] = nomeAtual;
+				nomeAtual = nAux;
+			}
+		}
+		scoreUpdated = true;
+		//SAVE IN FILE
+		fScore = file_text_open_write(working_directory+"score.txt");
+		file_text_write_real(fScore, n);
+		file_text_writeln(fScore);
+		for(i = 0; i < n; i++){
+			file_text_write_string(fScore, string(leaderboard[i]));
+			file_text_writeln(fScore);
+			file_text_write_real(fScore, scoreboard[i]);
+			file_text_writeln(fScore);
+		}
+		file_text_close(fScore);
+	}
 }
 #endregion

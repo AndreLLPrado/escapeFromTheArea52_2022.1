@@ -1,3 +1,4 @@
 visible = false;
 
 inputName = "";
+nameSeted = "";
