@@ -46,6 +46,8 @@ if reset{
 	instance_destroy(obj_enymy_base);
 	obj_enemySpawn.sTime = obj_enemySpawn.sTimer;
 	obj_enemySpawn.diff = 1;
+	obj_enemySpawanner.sTime = obj_enemySpawanner.sTimer;
+	obj_enemySpawanner.diff = 1;
 
 	instance_create_depth(156,157,1, obj_enymy_base);
 	gameOver = false;

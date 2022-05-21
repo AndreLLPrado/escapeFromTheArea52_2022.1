@@ -10,10 +10,10 @@ draw_text(40, 40,"Best Score: " + string(bestScore));
 
 
 #region DEBUGSPAWN
-draw_text(750, 20, "Difficulty(Spawn): " + string(obj_enemySpawn.diff));
-draw_text(750, 40, "Timer: " + string((obj_enemySpawn.sTime / 30)));
+draw_text(750, 20, "Difficulty(Spawn): " + string(obj_enemySpawanner.diff));
+draw_text(750, 40, "Timer: " + string((obj_enemySpawanner.sTime / 30)));
 
-var seconds = (obj_enemySpawn.tDiff / 30);
+var seconds = (obj_enemySpawanner.tDiff / 30);
 draw_text(750,60,"Difficulty Timer: " + string(seconds)+"s");
 
 draw_text(40, 60,"invincibility: " + string((inv / 30)));
