@@ -11,6 +11,7 @@ if obj_player.visible == false {
 	else{
 		//Game Over
 		gameOver = true;
+		debugMode = true;
 		obj_player.image_blend = c_red;
 		obj_player.visible = true;
 	}
@@ -44,20 +45,22 @@ if reset{
 
 	//Reset Enemy
 	instance_destroy(obj_enymy_base);
-	obj_enemySpawn.sTime = obj_enemySpawn.sTimer;
-	obj_enemySpawn.diff = 1;
+	//obj_enemySpawn.sTime = obj_enemySpawn.sTimer;
+	//obj_enemySpawn.diff = 1;
 	obj_enemySpawanner.sTime = obj_enemySpawanner.sTimer;
 	obj_enemySpawanner.diff = 1;
 
 	instance_create_depth(156,157,1, obj_enymy_base);
 	gameOver = false;
 	reset = false;
+	debugMode = false;
 }
 #endregion
 
 #region STARTGAME
 if keyboard_check_pressed(ord("T")){
 	startGame = true;
+	debugMode = false;
 }
 #endregion
 

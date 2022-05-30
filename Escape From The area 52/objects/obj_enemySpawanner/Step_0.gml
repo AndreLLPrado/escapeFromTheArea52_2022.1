@@ -1,6 +1,6 @@
 if instance_exists(obj_player){
 	if obj_player.visible == true && !obj_gameController.respawn && !obj_gameController.gameOver 
-	&& obj_gameController.startGame{
+	&& obj_gameController.startGame && !obj_gameController.pauseGame{
 		tDiff--;
 		sTime--;
 		if sTime <= 0 {

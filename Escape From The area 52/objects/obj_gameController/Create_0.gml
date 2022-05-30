@@ -9,9 +9,10 @@ gameOver = false;
 reset = false;
 nameInputed = false;
 startGame = false;
-debugMode = false;
+debugMode = true;
 scoreUpdated = false;
 playerName = "AND";
+pauseGame = false;
 
 #region SCOREBOARD
 scoreboard = [];

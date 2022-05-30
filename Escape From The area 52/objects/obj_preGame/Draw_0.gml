@@ -1,1 +1,1 @@
-draw_text(pX, pY, msg);
+//draw_text(pX, pY, msg);

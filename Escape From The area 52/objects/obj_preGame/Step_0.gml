@@ -6,7 +6,7 @@ esc = keyboard_check(vk_escape);
 #endregion
 
 
-
+/*
 #region MENSSAGEMANAGER
 if !confirm{
 	msg = "Do you like create Scoreboard file?\nPress Y - to yes or Press N - to no"
@@ -49,3 +49,4 @@ if next{
 	room_goto_next();
 }
 #endregion
+*/

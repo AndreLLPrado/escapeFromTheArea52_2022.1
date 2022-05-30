@@ -8,7 +8,7 @@ up = keyboard_check(ord("W"));
 
 //movimentation
 #region MOVIMENTATION
-if !obj_gameController.gameOver && obj_gameController.startGame{
+if !obj_gameController.gameOver && obj_gameController.startGame && !obj_gameController.pauseGame{
 	//Colisions
 	hSpeed = (right - left) * pSpeed;
 
@@ -40,7 +40,7 @@ if !obj_gameController.gameOver && obj_gameController.startGame{
 
 //bullet shooting
 #region SHOOT
-if !obj_gameController.gameOver && obj_gameController.startGame{
+if !obj_gameController.gameOver && obj_gameController.startGame && !obj_gameController.pauseGame{
 	if mouse_check_button(mb_left) and shootCooldown < 1{
 		instance_create_depth(obj_player.x, obj_player.y, -1, obj_bullet);
 		shootCooldown = sCooldown;

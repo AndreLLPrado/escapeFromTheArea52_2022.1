@@ -1,4 +1,4 @@
-sTimer = 120;
+sTimer = 90;
 sTime = sTimer;
 
 difficultyTimer = 900;
@@ -6,8 +6,8 @@ tDiff = difficultyTimer;
 
 diff = 1;
 
-Max = 5;
-debugMode = true;
+Max = 10;
+debugMode = false;
 t = 0;
 
 #region CREATESPOTS
