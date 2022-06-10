@@ -9,3 +9,5 @@ pSpeed = 2;
 
 shootCooldown = 0;
 sCooldown = 15;
+
+autoFire = false;

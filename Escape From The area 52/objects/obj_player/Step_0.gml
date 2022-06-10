@@ -41,10 +41,14 @@ if !obj_gameController.gameOver && obj_gameController.startGame && !obj_gameCont
 //bullet shooting
 #region SHOOT
 if !obj_gameController.gameOver && obj_gameController.startGame && !obj_gameController.pauseGame{
-	if mouse_check_button(mb_left) and shootCooldown < 1{
-		instance_create_depth(obj_player.x, obj_player.y, -1, obj_bullet);
+	if (mouse_check_button(mb_left) || autoFire) and shootCooldown < 1{
+		//instance_create_depth(obj_player.x, obj_player.y, -1, obj_bullet);
+		instance_create_layer(obj_player.x, obj_player.y, "Instances", obj_bullet);
 		shootCooldown = sCooldown;
 	}
 	shootCooldown -= 1;
+	if keyboard_check_pressed(ord("Q")){
+		autoFire = !autoFire;
+	}
 }
 #endregion

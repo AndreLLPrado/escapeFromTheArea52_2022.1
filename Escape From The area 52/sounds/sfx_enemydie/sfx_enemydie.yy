@@ -1,7 +1,7 @@
 {
   "conversionMode": 0,
   "compression": 0,
-  "volume": 0.3,
+  "volume": 0.2,
   "preload": false,
   "bitRate": 128,
   "sampleRate": 44100,
@@ -11,14 +11,14 @@
     "name": "audiogroup_default",
     "path": "audiogroups/audiogroup_default",
   },
-  "soundFile": "bgm_music1.mp3",
-  "duration": 160.99265,
+  "soundFile": "sfx_enemydie.mp3",
+  "duration": 1.20175,
   "parent": {
     "name": "Sounds",
     "path": "folders/Sounds.yy",
   },
   "resourceVersion": "1.0",
-  "name": "bgm_music1",
+  "name": "sfx_enemyDie",
   "tags": [],
   "resourceType": "GMSound",
 }

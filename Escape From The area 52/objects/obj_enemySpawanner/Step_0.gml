@@ -11,7 +11,8 @@ if instance_exists(obj_player){
 				var spot = random(4);
 				var objSpot = spots[spot];
 				t = spot;
-				instance_create_depth(objSpot.x + range, objSpot.y + range,1,obj_enymy_base);
+				//instance_create_depth(objSpot.x + range, objSpot.y + range,1,obj_enymy_base);
+				instance_create_layer(objSpot.x + range, objSpot.y + range,"Instances",obj_enymy_base);
 				
 			}
 			

@@ -9,9 +9,17 @@ if instance_exists(obj_player){
 		y = 0;
 		move_towards_point(x, y, 0);
 	}
+	
+	/*if obj_player.respawn && obj_player.startGame{
+		var test = random(10);
+		if test < 5 {
+			instance_destroy();
+		}
+	}*/
 }
 
 if hp <= 0{
 	obj_gameController.scorePoints += valuePoints;
+	//audio_play_sound(sfx_enemyDie,1, false);
 	instance_destroy();
 }
